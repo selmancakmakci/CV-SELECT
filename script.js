@@ -7,7 +7,7 @@ const data = [
     Age: "24",
     Specialty: "JS",
     Experience: "5 years",
-    Hobbies: ["art", "cinema", "ice skating", "foods", "study"],
+    Hobbies: ["art", "ice skating", "foods", "study"],
   },
   {
     Image:
@@ -17,7 +17,7 @@ const data = [
     Age: "24",
     Specialty: "CSS",
     Experience: "4 years",
-    Hobbies: ["Spor", "Cinema", "Study", "Hiking", "Camping"],
+    Hobbies: ["Spor", "Study", "Hiking", "Camping"],
   },
   {
     Image:
