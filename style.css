@@ -1,7 +1,4 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
 
 body {
   display: flex;
@@ -9,7 +6,7 @@ body {
   background-color: azure;
 }
 
-#dataGosterimYeri {
+#dataShownArea {
   margin: auto;
   padding: 0px;
   border-radius: 30px;
@@ -20,7 +17,7 @@ body {
   box-shadow: 2px 2px 2px 2px;
 }
 
-#ustContainer {
+#upperContainer {
   display: flex;
   flex-direction: row;
   margin: auto;
@@ -76,7 +73,7 @@ li {
   box-shadow: 2px 2px green;
 }
 
-#hobiler {
+#hobbies {
   margin: auto;
   width: 16.8em;
   border-radius: 35px;
@@ -84,28 +81,26 @@ li {
   padding: 0.5em;
   background-color: hsl(20, 52%, 52%);
   font-weight: bolder;
-  box-shadow: 2px 2px  rgb(152, 87, 27);
-  
+  box-shadow: 2px 2px rgb(152, 87, 27);
 }
 
 .altCard {
   color: rgb(58, 58, 155);
 }
 
-#sec {
+#choose {
   width: 20em;
   height: 3em;
   margin: auto;
   border-radius: 35px;
   border: none;
-  background-color: rgba(23, 4, 7, 0.807);font-weight: bolder;
+  background-color: rgba(23, 4, 7, 0.807);
+  font-weight: bolder;
   color: rgb(221, 14, 14);
-  
-  
 }
-#sec:hover{
-    transform: scale(1.2);
-    cursor: pointer;
+#sec:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .resultDiv {
@@ -115,34 +110,30 @@ li {
   width: 15em;
   border-radius: 35px;
   background-color: rgb(244, 240, 240);
-
 }
 
 .resultDiv p {
-    width: 10em;
-    font-size: 20px;
-    margin: auto;
-    border-radius: 35px;
-    margin-top: 1em;
-    background-color:hsl(244, 46%, 75%); 
-    color: brown;
-    font-weight: bolder;
-    box-shadow: 1px 1px rgb(109, 109, 175);
-    
-  }
+  width: 10em;
+  font-size: 20px;
+  margin: auto;
+  border-radius: 35px;
+  margin-top: 1em;
+  background-color: hsl(244, 46%, 75%);
+  color: brown;
+  font-weight: bolder;
+  box-shadow: 1px 1px rgb(109, 109, 175);
+}
 
 #choosenOne {
   text-align: center;
   font-size: 25px;
   margin-top: 1em;
   color: brown;
-  font-family: 'Rock Salt', cursive;
+  font-family: "Rock Salt", cursive;
   font-weight: bolder;
-
 }
 
-
-#sonraki {
+#after {
   width: 50px;
   height: 50px;
   background-color: blue;
@@ -150,12 +141,12 @@ li {
   margin-top: 15em;
   margin-left: 4em;
 }
-#sonraki:hover {
+#after:hover {
   cursor: pointer;
   transform: scale(1.3);
 }
 
-#onceki {
+#before {
   width: 50px;
   height: 50px;
   background-color: blue;
@@ -164,22 +155,22 @@ li {
   margin-right: 4em;
 }
 
-#onceki:hover {
+#before:hover {
   cursor: pointer;
   transform: scale(1.3);
 }
 
-
 #congratulation {
-    animation: jump 1s infinite;
-    /* Kelimenizin diğer stil ayarları (renk, font, vs.) */
+  animation: jump 1s infinite;
+  /* Kelimenizin diğer stil ayarları (renk, font, vs.) */
 }
 
 @keyframes jump {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px); /* Yukarıya doğru zıplama mesafesi */
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Yukarıya doğru zıplama mesafesi */
+  }
 }

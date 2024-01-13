@@ -73,12 +73,12 @@ const data = [
 
 let index = 0;
 
-const dataleriYukle = () => {
+const uploadDatas = () => {
   let currentPerson = data[index];
   let dataElement = document.querySelector("dataGosterimYeri");
   let dataElement2 = document.querySelector("#altCard");
   let dataElement3 = document.querySelector("#profile");
-  let dataElement4 = document.querySelector("#hobiler");
+  let dataElement4 = document.querySelector("#hobbies");
 
   let Image = document.createElement("img");
   Image.src = currentPerson.Image;
@@ -90,16 +90,13 @@ const dataleriYukle = () => {
   dataElement3.appendChild(Name);
 
   let Age = document.createElement("h2");
-
   Age.textContent = "Age: " + currentPerson.Age;
-
   Age.className = "altCard";
   dataElement2.appendChild(Age);
 
   let Specialty = document.createElement("h2");
   Specialty.textContent = "Specialty: " + currentPerson.Specialty;
   Specialty.className = "altCard";
-
   dataElement2.appendChild(Specialty);
 
   let Experience = document.createElement("h2");
@@ -115,73 +112,59 @@ const dataleriYukle = () => {
   });
 };
 
-dataleriYukle();
+uploadDatas();
 
-const sonrakiKisi = () => {
+const nextPerson = () => {
   let dataElement2 = document.querySelector("#altCard");
   dataElement2.innerHTML = "";
   let dataElement3 = document.querySelector("#profile");
   dataElement3.innerHTML = "";
-  let dataElement4 = document.querySelector("#hobiler");
+  let dataElement4 = document.querySelector("#hobbies");
   dataElement4.innerHTML = "";
   document.querySelector("#congratulation").innerHTML = "";
   document.querySelector("#choosenOne").innerHTML = "";
 
   index++;
   if (index >= data.length) {
-    index = data.length - 1;
+    index = 0;
   }
-  dataleriYukle();
+  uploadDatas();
 };
-const oncekiKisi = () => {
+const previousPerson = () => {
   let dataElement2 = document.querySelector("#altCard");
   dataElement2.innerHTML = "";
   let dataElement3 = document.querySelector("#profile");
   dataElement3.innerHTML = "";
-  let dataElement4 = document.querySelector("#hobiler");
+  let dataElement4 = document.querySelector("#hobbies");
   dataElement4.innerHTML = "";
   document.querySelector("#congratulation").innerHTML = "";
   document.querySelector("#choosenOne").innerHTML = "";
   index--;
   if (index < 0) {
-    index = 0;
+    index = 6;
   }
 
-  dataleriYukle();
+  uploadDatas();
 };
 
-let onceki = document.querySelector("#onceki");
-onceki.addEventListener("click", oncekiKisi);
+let before = document.querySelector("#before");
+before.addEventListener("click", previousPerson);
 
-let sonraki = document.querySelector("#sonraki");
-sonraki.addEventListener("click", sonrakiKisi);
-/*
-const kisiyiIseAl = () => {
-  let eklenecekYer = document.querySelector("#congratulation");
-  eklenecekYer.innerHTML = "";
+let after = document.querySelector("#after");
+after.addEventListener("click", nextPerson);
 
-  let result = document.createElement("p");
+const hireThePerson = () => {
+  let placeToAdd2 = document.querySelector("#choosenOne");
+  placeToAdd2.innerHTML = "";
 
-  let currentPerson = data[index];
-  result.textContent = "CONGRATULATIONS";
-
-  result.style.color = "red";
-  eklenecekYer.appendChild(result);
-};
-*/
-const kisiyiIseAl = () => {
-  let eklenecekYer2 = document.querySelector("#choosenOne");
-  eklenecekYer2.innerHTML = "";
-
-  let eklenecekYer = document.querySelector("#congratulation");
-  eklenecekYer.innerHTML = "";
+  let placeToAdd = document.querySelector("#congratulation");
+  placeToAdd.innerHTML = "";
 
   let currentPerson = data[index];
 
   let cardDiv = document.createElement("div");
   cardDiv.className = "resultDiv";
 
- 
   let nameParagraph = document.createElement("p");
   nameParagraph.textContent = `${currentPerson.Name} ${currentPerson.Surname}`;
   cardDiv.appendChild(nameParagraph);
@@ -192,25 +175,18 @@ const kisiyiIseAl = () => {
 
   let congratulationMessage = document.createElement("p");
   congratulationMessage.textContent = "🎉 CONGRATULATIONS 🎉";
-  eklenecekYer2.appendChild(congratulationMessage);
- 
-  eklenecekYer.appendChild(cardDiv);
-  
+  placeToAdd2.appendChild(congratulationMessage);
+
+  placeToAdd.appendChild(cardDiv);
+
   confetti({
     particleCount: 550,
     spread: 100,
-    ticks:200,
-    origin: { y: 0.9 }
+    ticks: 200,
+    origin: { y: 0.9 },
   });
 };
 
-let kisiyiIseAlmaButonu = document.querySelector("#sec");
+let whoIsTheLuckyOne = document.querySelector("#choose");
 
-kisiyiIseAlmaButonu.addEventListener("click", kisiyiIseAl);
-
-
-
-
-
-
-
+whoIsTheLuckyOne.addEventListener("click", hireThePerson);
