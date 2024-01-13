@@ -12,24 +12,20 @@
 body {
   display: flex;
   flex-direction: column;
-  background-color: azure;
-}
-@media (max-width: 600px) {
-  #dataShownArea {
-    width: 100%; 
-    height: auto; 
-  }
-
-  img {
-    width: 100px;
-    height: 100px;
-  }
-
+  background-color: rgb(35, 44, 44);
+  
   
 }
-
-
-@media (max-width: 768px) {
+#container{
+  display: inline-block;
+  
+  align-items: center;
+  border: solid 2px;
+  width: 45em;
+  height:65em;
+  margin: auto;
+  background-color: antiquewhite;
+  border-radius: 35px;
   
 }
 
@@ -38,7 +34,7 @@ body {
   padding: 0px;
   border-radius: 30px;
   width: 20em;
-  height: 30em;
+  height: 31em;
   background-color: rgb(244, 240, 240);
   text-align: center;
   box-shadow: 2px 2px 2px 2px;
@@ -124,12 +120,13 @@ li {
 #choose {
   width: 20em;
   height: 3em;
-  margin: auto;
+  margin-left: 17.5em;
   border-radius: 35px;
   border: none;
   background-color: rgba(23, 4, 7, 0.807);
   font-weight: bolder;
   color: rgb(221, 14, 14);
+  
 }
 #sec:hover {
   transform: scale(1.2);
