@@ -179,6 +179,9 @@ const hireThePerson = () => {
 
   placeToAdd.appendChild(cardDiv);
 
+  var audio = new Audio('./short-crowd-cheer-6713.mp3');
+  audio.play();
+  
   confetti({
     particleCount: 550,
     spread: 100,
